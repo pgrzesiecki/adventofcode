@@ -68,4 +68,9 @@ def getValue(input, useWords=True):
 # python 1.py < 1b.txt (useWords=True)
 if __name__ == "__main__":
     data = sys.stdin.read().split("\n")
-    print(getValue([i for i in data if i.strip() != ""], useWords=True))
+    print(
+        f"A - {getValue([i for i in data if i.strip() != ""], useWords=True)}"
+    )
+    print(
+        f"B - {getValue([i for i in data if i.strip() != ""], useWords=False)}"
+    )
